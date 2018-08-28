@@ -51,10 +51,10 @@
 
 
     <script>
-        let playlist = ["Vanilla Fudge - You keep me hanging on ;-)", "Cream - White Room ;-)", "Aguaturbia - Heartbreaker ;-)", "Jefferson Airplane - Somebody to Love ;-)", "Rolling Stones - Mothers little helper ;-)"];
+        let playlist = ["Vanilla Fudge - You keep me hanging on", "Cream - White Room", "Aguaturbia - Heartbreaker ", "Jefferson Airplane - Somebody to Love", "Rolling Stones - Mothers little helper"];
 
         playlist.forEach(musikstykke => {
-            document.querySelector("#display").innerHTML += musikstykke + "<br><br>";
+            document.querySelector("#display").innerHTML += musikstykke + "<br><p>;-)</p><br>";
             console.log(musikstykke)
         });
     </script>
