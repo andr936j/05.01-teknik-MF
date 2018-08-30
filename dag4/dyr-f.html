@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+</head>
+
+<body>
+
+
+    <div class="dyr"></div>
+    <template class="dyretemplate">
+            <div class="dyr">
+                <h2></h2>
+                <ul>
+                    <li class="type-data"></li>
+                    <li class="levested-data"></li>
+                </ul>
+                <img src="" alt="">
+            </div>
+        </template>
+    <script>
+        let dyr = [{
+                "navn": "Elefant",
+                "type": "Pattedyr",
+                "levested": "Indien og Afrika",
+                "billede": "http://lorempixel.com/400/200"
+
+            },
+            {
+                "navn": "Sild",
+                "type": "Fisk",
+                "levested": "Nordsøen",
+                "billede": "http://lorempixel.com/400/200/"
+            },
+            {
+                "navn": "Krokodille",
+                "type": "Krybdyr",
+                "levested": "Nilen",
+                "billede": "http://lorempixel.com/400/200/"
+            },
+        ];
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            dest = document.querySelector(".dyr");
+
+            temp = document.querySelector(".dyretemplate");
+
+            dyr.forEach(animal => {
+
+                let klon = temp.cloneNode(true).content;
+
+                klon.querySelector("h2").textContent = animal.navn;
+
+                klon.querySelector("ul .type-data").textContent = animal.type;
+
+                klon.querySelector("ul .levested-data").textContent = animal.levested;
+
+                klon.querySelector("img").src = animal.billede;
+
+                dest.appendChild(klon);
+            })
+    </script>
+</body>
+
+</html>
