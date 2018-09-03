@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Css Grid</title>
+    <style>
+        .container {
+
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 40px 100px 40px;
+            grid-gap: 5px;
+
+        }
+
+        .item {
+            border: 1px solid #000;
+
+        }
+
+        .item-a {
+            background: yellow;
+            grid-column-end: span 4;
+
+        }
+
+        .item-b {
+            background: green;
+            grid-column-end: span 1;
+        }
+
+        .item-c {
+            background: red;
+            grid-column-end: span 3;
+        }
+
+        .item-d {
+            background: blue;
+            grid-column-end: span 4;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-a">A</div>
+        <div class="item item-b">B</div>
+        <div class="item item-c">C</div>
+        <div class="item item-d">D</div>
+    </div>
+</body>
+
+</html>

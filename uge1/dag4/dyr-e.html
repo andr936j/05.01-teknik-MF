@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+</head>
+
+<body>
+
+    <div class="liste"></div>
+    <script>
+        let dyr = [{
+                "navn": "Elefant",
+                "type": "Pattedyr",
+                "levested": "Indien og Afrika",
+                "billede": "http://lorempixel.com/400/200"
+
+            },
+            {
+                "navn": "Sild",
+                "type": "Fisk",
+                "levested": "Nordsøen",
+                "billede": "http://lorempixel.com/400/200/"
+            },
+            {
+                "navn": "Krokodille",
+                "type": "Krybdyr",
+                "levested": "Nilen",
+                "billede": "http://lorempixel.com/400/200/"
+            },
+        ];
+        document.addEventListener("DOMContentLoaded", start);
+        let dest = document.querySelector(".liste");
+
+
+        function start() {
+            dyr.forEach(dyr => {
+                dest.innerHTML +=
+                    "<img src='" + dyr.billede + "'>" +
+                    dyr.navn + " er et " +
+                    dyr.type + " som lever normalt  " +
+                    dyr.levested + "<br><br>";
+            })
+        }
+    </script>
+</body>
+
+</html>
