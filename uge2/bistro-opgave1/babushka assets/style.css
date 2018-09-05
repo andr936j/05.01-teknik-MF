@@ -128,7 +128,7 @@ footer .schedule {
         #modal {
             width: 100vw;
             height: 100vh;
-            position: fixed;
+            position: absolute;
             background-color: rgba(0, 0, 0, .7);
             text-align: center;
             /*display: none;*/
@@ -136,14 +136,14 @@ footer .schedule {
             opacity: 0;
             pointer-events: none;
         }
-        
+
         #modal-content {
             width: 70vw;
             height: 70vh;
             background-color: rgba(250, 250, 250, 1);
             margin: auto;
         }
-        
+
         #modal.vis {
             /* display: block;*/
             opacity: 1;

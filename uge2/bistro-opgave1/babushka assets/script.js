@@ -24,7 +24,7 @@ function filter() {
 function visRetter() {
     let temp = document.querySelector(".retTemplate");
     let dest = document.querySelector(".retContainer");
-            
+
     // Løb menuen igennem og lav en klon //
     retter.forEach(ret => {
     if (ret.kategori == kategori || kategori == "alle") {
@@ -49,7 +49,7 @@ klon.querySelector("[data-billede]").addEventListener("click", () => {
 
 // Modal view af individuel ret //
 function visModal(retten) {
-    modal.classList.add("vis");
+    document.getElementById("modal").style.opacity = "1"; 
     modal.querySelector(".modal-navn").textContent = retten.navn;
     modal.querySelector(".modal-billede").src = retten.billede;
     modal.querySelector(".modal-billede").alt = "Foto af" + retten.navn;
@@ -57,5 +57,5 @@ function visModal(retten) {
     }
 
 function skjulModal() {
-    document.querySelector("#modal").classList.remove("vis");   
+    document.querySelector("#modal").classList.remove("vis");
  }
